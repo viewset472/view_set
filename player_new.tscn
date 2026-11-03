@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwhfaerq63mit"]
+
+[ext_resource type="Texture2D" uid="uid://dcxq0geln42k5" path="res://相片小q.png" id="1_rw4sr"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="2_fcgwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8g5g"]
+size = Vector2(54, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("2_fcgwq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rw4sr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 99)
+shape = SubResource("RectangleShape2D_h8g5g")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)

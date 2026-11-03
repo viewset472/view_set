@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://ktlp8kl2vj1w"]
+
+[ext_resource type="Script" path="res://battle.gd" id="1_w1k4r"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_w1k4r")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "战斗场景（测试）"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 368.0
+offset_top = 312.0
+offset_right = 431.0
+offset_bottom = 343.0
+text = "逃跑"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 461.0
+offset_top = 312.0
+offset_right = 524.0
+offset_bottom = 343.0
+text = "胜利"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

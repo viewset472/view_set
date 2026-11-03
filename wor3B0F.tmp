@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx7ksndbdllu1"]
+
+[ext_resource type="Texture2D" uid="uid://bs6ekgo5ynwe5" path="res://地图.png" id="1_1vjyj"]
+[ext_resource type="PackedScene" uid="uid://cngmp335j1xnl" path="res://enemy.tscn" id="2_d5fkv"]
+[ext_resource type="PackedScene" uid="uid://dwhfaerq63mit" path="res://player_new.tscn" id="3_5ey2j"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(256, 256)
+texture = ExtResource("1_1vjyj")
+
+[node name="YSortObjects" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_d5fkv")]
+position = Vector2(177, 107)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_5ey2j")]
+position = Vector2(512, 378)
