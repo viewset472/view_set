@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwhfaerq63mit"]
+[gd_scene load_steps=5 format=3 uid="uid://dwhfaerq63mit"]
 
 [ext_resource type="Texture2D" uid="uid://dcxq0geln42k5" path="res://相片小q.png" id="1_rw4sr"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="2_fcgwq"]
+[ext_resource type="Texture2D" uid="uid://byml38f1r63v2" path="res://shadow.png" id="3_8pjn3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8g5g"]
-size = Vector2(54, 16)
+size = Vector2(54, 17)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -12,10 +13,17 @@ script = ExtResource("2_fcgwq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rw4sr")
+offset = Vector2(0, -110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13, 99)
+position = Vector2(13, -10)
 shape = SubResource("RectangleShape2D_h8g5g")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.807843)
+z_index = -1
+position = Vector2(0, -110)
+texture = ExtResource("3_8pjn3")
